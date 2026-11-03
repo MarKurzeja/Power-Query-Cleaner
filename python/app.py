@@ -1,11 +1,11 @@
 """
-Data Assistant for Power BI - Streamlit app.
+Power Query Cleaner - Streamlit app.
 
 Data quality report, cleaning plan and ready-to-use Power Query code.
 English and Polish interface (switch in the sidebar).
 
-Run:
-    streamlit run app.py
+Run from the repository root:
+    python run.py app
 """
 
 import pandas as pd
@@ -17,7 +17,7 @@ from loading import load_file
 from profiling import profile_dataframe
 from reshape import check_codes, detect_wide_layout, unpivot
 
-st.set_page_config(page_title="Data Assistant for Power BI", layout="wide")
+st.set_page_config(page_title="Power Query Cleaner", layout="wide")
 
 # --- Language -----------------------------------------------------------------
 lang = st.sidebar.radio(

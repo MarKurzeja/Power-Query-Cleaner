@@ -10,7 +10,7 @@ LANGUAGES = {"en": "English", "pl": "Polski"}
 
 TEXTS: dict[str, dict[str, str]] = {
     # --- App ------------------------------------------------------------------
-    "app_title": {"en": "Data Assistant for Power BI", "pl": "Asystent danych dla Power BI"},
+    "app_title": {"en": "Power Query Cleaner", "pl": "Power Query Cleaner"},
     "app_caption": {
         "en": "Upload a CSV or Excel file to see what needs fixing before you load it into Power BI. "
               "Built with Polish data formats in mind.",
@@ -19,8 +19,8 @@ TEXTS: dict[str, dict[str, str]] = {
     "language": {"en": "Language", "pl": "Język"},
     "choose_file": {"en": "Choose a file", "pl": "Wybierz plik"},
     "no_file_hint": {
-        "en": "No file at hand? Run `python data/generate_test_data.py` and upload `data/orders_messy.csv`.",
-        "pl": "Nie masz pliku pod ręką? Uruchom `python data/generate_test_data.py` i wrzuć `data/orders_messy.csv`.",
+        "en": "No file at hand? Run `python run.py generate` and upload `data/orders_messy.csv`.",
+        "pl": "Nie masz pliku pod ręką? Uruchom `python run.py generate` i wrzuć `data/orders_messy.csv`.",
     },
     "load_error": {"en": "Could not read the file: {error}", "pl": "Nie udało się wczytać pliku: {error}"},
     "loaded_csv": {

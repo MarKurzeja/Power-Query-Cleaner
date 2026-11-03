@@ -1,5 +1,8 @@
-streamlit>=1.35
-pandas>=2.2
-openpyxl>=3.1
-charset-normalizer>=3.3
-pytest>=8.0
+# Direct runtime dependencies (versions tested with Python 3.13)
+streamlit==1.65.0
+pandas==3.0.6
+openpyxl==3.1.5
+charset-normalizer==3.5.2
+
+# Tests
+pytest==9.1.1

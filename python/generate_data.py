@@ -1,6 +1,7 @@
 """
 Generates a deliberately messy file of online-shop orders.
-Run: python data/generate_test_data.py
+Run from the repository root:  python run.py generate
+Output: data/orders_messy.csv
 
 The file contains typical problems of Polish data:
 - Windows-1250 encoding and a semicolon separator,
@@ -89,7 +90,8 @@ for i in range(1, 301):
 rows += random.sample(rows, 6)
 random.shuffle(rows)
 
-out = Path(__file__).parent / "orders_messy.csv"
+out = Path(__file__).resolve().parent.parent / "data" / "orders_messy.csv"
+out.parent.mkdir(exist_ok=True)
 with open(out, "w", encoding="cp1250", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=rows[0].keys(), delimiter=";")
     writer.writeheader()

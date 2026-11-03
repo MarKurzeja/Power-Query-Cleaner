@@ -1,6 +1,6 @@
 """
-Automated tests. Run:
-    python -m pytest
+Automated tests. Run from the repository root:
+    python run.py test
 
 Each test checks one behaviour, so a failing test points straight to what broke.
 """
@@ -10,8 +10,8 @@ from pathlib import Path
 
 import pandas as pd
 
-# Allow importing modules from the project root.
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Allow importing modules from the python/ folder.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "python"))
 
 from cleaning import apply_steps, steps_to_m, suggest_steps  # noqa: E402
 from i18n import TEXTS, issues_count  # noqa: E402

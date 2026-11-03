@@ -1,10 +1,14 @@
+# Python environment
 .venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Secrets
 .env
 .streamlit/secrets.toml
 
 # Raw GIOŚ data (large files) - download instructions in README
-data/gios/
+real_data/gios/
+
 .DS_Store
