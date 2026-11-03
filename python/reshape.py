@@ -25,7 +25,7 @@ from datetime import date, datetime
 
 import pandas as pd
 
-from i18n import t
+from texts import t
 
 MAX_HEADER_ROWS = 20      # headers longer than 20 rows are treated as unusual
 MIN_VALUE_COLUMNS = 3     # a wide layout needs several value columns
@@ -111,18 +111,18 @@ def detect_wide_layout(raw: pd.DataFrame | None) -> WideLayout | None:
     )
 
 
-def column_names(layout: WideLayout, lang: str) -> tuple[str, str]:
+def column_names(layout: WideLayout) -> tuple[str, str]:
     """Column names after unpivoting: (date column, value column)."""
-    return t("col_name_date", lang), t("col_name_value", lang)
+    return t("col_name_date"), t("col_name_value")
 
 
-def unpivot(raw: pd.DataFrame, layout: WideLayout, lang: str) -> pd.DataFrame:
+def unpivot(raw: pd.DataFrame, layout: WideLayout) -> pd.DataFrame:
     """Unpivots a wide table into long format (pandas, for the in-app preview).
 
     Empty cells (no measurement) are dropped - exactly like Table.UnpivotOtherColumns
     in Power Query, so row counts match.
     """
-    date_col, value_col = column_names(layout, lang)
+    date_col, value_col = column_names(layout)
     data = raw.iloc[layout.data_start:].copy()
     data.columns = [date_col] + layout.keys
     long = data.melt(id_vars=date_col, var_name=layout.key_label, value_name=value_col)
@@ -137,7 +137,7 @@ def unpivot(raw: pd.DataFrame, layout: WideLayout, lang: str) -> pd.DataFrame:
     return long.reset_index(drop=True)
 
 
-def wide_to_m(layout: WideLayout, lang: str, source_name: str) -> list[tuple[str, str]]:
+def wide_to_m(layout: WideLayout, source_name: str) -> list[tuple[str, str]]:
     """M steps that do in Power BI what unpivot() does in pandas.
 
     Returns a list of (step name, expression). The first expressions refer to the
@@ -145,10 +145,10 @@ def wide_to_m(layout: WideLayout, lang: str, source_name: str) -> list[tuple[str
     """
     from cleaning import m_name, m_text   # local import avoids a circular import
 
-    date_col, value_col = column_names(layout, lang)
+    date_col, value_col = column_names(layout)
     src = m_name(source_name)
-    keys, body, renamed, unpivoted = (t("m_wide_keys", lang), t("m_wide_data", lang),
-                                      t("m_wide_renamed", lang), t("m_wide_unpivoted", lang))
+    keys, body, renamed, unpivoted = (t("m_wide_keys"), t("m_wide_data"),
+                                      t("m_wide_renamed"), t("m_wide_unpivoted"))
     steps = [
         # Keys are read from the file (not hard-coded), so the same code works for
         # other years even if the list of stations changes.
@@ -161,11 +161,11 @@ def wide_to_m(layout: WideLayout, lang: str, source_name: str) -> list[tuple[str
     ]
     prev = unpivoted
     for label, row in layout.constants.items():
-        name = t("m_added", lang, col=label)
+        name = t("m_added", col=label)
         steps.append((name, f"Table.AddColumn({m_name(prev)}, {m_text(label)}, "
                             f"each Text.From(Record.ToList({src}{{{row}}}){{1}}), type text)"))
         prev = name
-    steps.append((t("m_types", lang),
+    steps.append((t("m_types"),
                   f"Table.TransformColumnTypes({m_name(prev)}, {{{{{m_text(date_col)}, type date}}, "
                   f"{{{m_text(layout.key_label)}, type text}}, {{{m_text(value_col)}, type number}}}}"
                   # "3,878" converts to a number only with the Polish locale.

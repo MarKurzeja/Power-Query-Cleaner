@@ -14,7 +14,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "python"))
 
 from cleaning import apply_steps, steps_to_m, suggest_steps  # noqa: E402
-from i18n import TEXTS, issues_count  # noqa: E402
+from texts import TEXTS, issues_count  # noqa: E402
 from loading import load_file  # noqa: E402
 from profiling import is_valid_nip, profile_column, profile_dataframe  # noqa: E402
 
@@ -33,20 +33,15 @@ def test_invalid_nip():
     assert not is_valid_nip("123")          # too short
 
 
-# --- Translations -------------------------------------------------------------
-def test_every_text_has_both_languages():
-    for key, versions in TEXTS.items():
-        assert set(versions) == {"en", "pl"}, key
+# --- Interface texts ----------------------------------------------------------
+def test_every_text_is_filled_in():
+    for key, text in TEXTS.items():
+        assert isinstance(text, str) and text.strip(), key
 
 
-def test_polish_plural():
-    assert issues_count(1, "pl") == "1 problem"
-    assert issues_count(3, "pl") == "3 problemy"
-    assert issues_count(5, "pl") == "5 problemów"
-    assert issues_count(12, "pl") == "12 problemów"
-    assert issues_count(22, "pl") == "22 problemy"
-    assert issues_count(1, "en") == "1 issue"
-    assert issues_count(2, "en") == "2 issues"
+def test_issues_plural():
+    assert issues_count(1) == "1 issue"
+    assert issues_count(2) == "2 issues"
 
 
 # --- Type detection -----------------------------------------------------------
@@ -88,14 +83,12 @@ def test_cleaning_removes_duplicates_and_fixes_types():
     assert set(cleaned["city"].dropna()) <= {"Kraków", "Warszawa", "Gdańsk", "Wrocław", "Łódź", "Poznań"}
 
 
-def test_power_query_code_in_both_languages():
+def test_power_query_code():
     result, profile = _load()
     steps = suggest_steps(result.df, profile)
-    m_pl = steps_to_m(steps, "C:\\data\\file.csv", "csv", result.encoding, result.separator, "pl")
-    m_en = steps_to_m(steps, "C:\\data\\file.csv", "csv", result.encoding, result.separator, "en")
-    assert m_pl.startswith("let") and m_pl.rstrip().endswith('#"Bez duplikatów"')
-    assert m_en.rstrip().endswith('#"Removed duplicates"')
-    assert "Encoding=1250" in m_en
+    m = steps_to_m(steps, "C:\\data\\file.csv", "csv", result.encoding, result.separator)
+    assert m.startswith("let") and m.rstrip().endswith('#"Removed duplicates"')
+    assert "Encoding=1250" in m
 
 
 # --- Wide layout (GIOŚ-style files) -------------------------------------------
@@ -133,8 +126,8 @@ def test_normal_file_is_not_wide():
 def test_unpivot_skips_empty_cells():
     from reshape import detect_wide_layout, unpivot
     result = _wide_excel()
-    long = unpivot(result.raw, detect_wide_layout(result.raw), "pl")
-    assert list(long.columns) == ["Data", "Kod stacji", "Wartość", "Wskaźnik", "Jednostka"]
+    long = unpivot(result.raw, detect_wide_layout(result.raw))
+    assert list(long.columns) == ["Date", "Kod stacji", "Value", "Wskaźnik", "Jednostka"]
     assert len(long) == 7                     # 8 cells, one empty
     assert long["Wskaźnik"].eq("PM10").all()
 
@@ -152,7 +145,7 @@ def test_old_codes_are_matched():
 def test_wide_power_query_code():
     from reshape import detect_wide_layout
     result = _wide_excel()
-    m = steps_to_m([], "C:\\data\\wide.xlsx", "excel", None, None, "en",
+    m = steps_to_m([], "C:\\data\\wide.xlsx", "excel", None, None,
                    sheet_name=result.sheet_name, layout=detect_wide_layout(result.raw))
     assert '[Item="PM10", Kind="Sheet"]' in m
     assert 'Table.UnpivotOtherColumns(#"Renamed columns", {"Date"}, "Kod stacji", "Value")' in m
@@ -160,8 +153,8 @@ def test_wide_power_query_code():
 
 def test_text_parameter_named_key():
     # Regression: a {key} placeholder (e.g. "Kod stacji") must not break t().
-    from i18n import t
-    assert "Kod stacji" in t("wide_unpivot_label", "pl", key="Kod stacji")
+    from texts import t
+    assert "Kod stacji" in t("wide_unpivot_label", key="Kod stacji")
 
 
 def test_wide_layout_with_comma_numbers_as_text():
@@ -180,9 +173,9 @@ def test_wide_layout_with_comma_numbers_as_text():
     result = load_file(buf.getvalue(), "bap.xlsx")
     layout = detect_wide_layout(result.raw)
     assert layout is not None and layout.decimal_comma
-    long = unpivot(result.raw, layout, "en")
+    long = unpivot(result.raw, layout)
     assert long["Value"].tolist() == [3.878, 1.25, 0.5, 14.566, 2.0]
-    m = steps_to_m([], "C:\\data\\bap.xlsx", "excel", None, None, "en",
+    m = steps_to_m([], "C:\\data\\bap.xlsx", "excel", None, None,
                    sheet_name=result.sheet_name, layout=layout)
     assert '{"Value", type number}}, "pl-PL")' in m
 

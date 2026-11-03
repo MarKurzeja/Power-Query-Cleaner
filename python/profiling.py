@@ -5,7 +5,7 @@ Plain, deterministic rules - no AI.
 Main entry point: profile_dataframe(df) -> DatasetProfile
 
 Issues are stored as Issue(key, params) rather than finished text,
-so the same report can be rendered in English or Polish (see i18n.py).
+and turned into text only when displayed (see texts.py).
 """
 
 import re
@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 
 import pandas as pd
 
-from i18n import t
+from texts import t
 
 # --- Value patterns -----------------------------------------------------------
 # Each pattern maps a type id to a regex. A column's type is the pattern
@@ -47,17 +47,17 @@ NIP_WEIGHTS = (6, 5, 7, 2, 3, 4, 5, 6, 7)
 
 @dataclass
 class Issue:
-    key: str                                    # text key in i18n.py, e.g. "issue_spaces"
+    key: str                                    # text key in texts.py, e.g. "issue_spaces"
     params: dict = field(default_factory=dict)  # values inserted into the text
 
-    def render(self, lang: str) -> str:
+    def render(self) -> str:
         params = dict(self.params)
         # Type names and format lists are translated too.
         if "type" in params:
-            params["type"] = t("type_" + params["type"], lang)
+            params["type"] = t("type_" + params["type"])
         if self.key == "issue_mixed_dates":
-            params["formats"] = ", ".join(t("type_" + f, lang) for f in params["formats"])
-        return t(self.key, lang, **params)
+            params["formats"] = ", ".join(t("type_" + f) for f in params["formats"])
+        return t(self.key, **params)
 
 
 @dataclass

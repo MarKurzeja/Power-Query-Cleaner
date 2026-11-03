@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 
 import pandas as pd
 
-from i18n import t
+from texts import t
 from profiling import (DATE_TYPES, MISSING_PLACEHOLDERS, NUMBER_TYPES,
                        DatasetProfile, normalize_text, to_number)
 
@@ -30,26 +30,26 @@ class Step:
         """Unique step id (used as the Streamlit checkbox key)."""
         return self.kind + ":" + ",".join(self.columns)
 
-    # --- Step descriptions in the selected language ---------------------------
-    def label(self, lang: str) -> str:
+    # --- Step descriptions shown in the app ------------------------------------
+    def label(self) -> str:
         col = self.columns[0] if self.columns else ""
         if self.kind == "numbers":
             key = "step_numbers_int_label" if self.params["integer"] else "step_numbers_dec_label"
-            return t(key, lang, col=col)
-        return t(f"step_{self.kind}_label", lang, col=col)
+            return t(key, col=col)
+        return t(f"step_{self.kind}_label", col=col)
 
-    def reason(self, lang: str) -> str:
+    def reason(self) -> str:
         p = self.params
         if self.kind == "trim":
-            return t("step_trim_reason", lang, columns=", ".join(self.columns))
+            return t("step_trim_reason", columns=", ".join(self.columns))
         if self.kind in ("variants", "recode"):
-            examples = ", ".join(f"„{k}” → „{v}”" for k, v in list(p["mapping"].items())[:3])
-            return t(f"step_{self.kind}_reason", lang, n=len(p["mapping"]), examples=examples)
+            examples = ", ".join(f"“{k}” → “{v}”" for k, v in list(p["mapping"].items())[:3])
+            return t(f"step_{self.kind}_reason", n=len(p["mapping"]), examples=examples)
         if self.kind == "numbers":
-            return t("step_numbers_reason", lang, type=t("type_" + p["type"], lang), culture=p["culture"])
+            return t("step_numbers_reason", type=t("type_" + p["type"]), culture=p["culture"])
         if self.kind == "duplicates":
-            return t("step_duplicates_reason", lang, n=p["n"])
-        return t(f"step_{self.kind}_reason", lang)
+            return t("step_duplicates_reason", n=p["n"])
+        return t(f"step_{self.kind}_reason")
 
 
 def _text_columns(df: pd.DataFrame) -> list[str]:
@@ -184,17 +184,16 @@ def m_list(values) -> str:
 
 
 def steps_to_m(steps: list[Step], file_path: str, file_type: str,
-               encoding: str | None, separator: str | None, lang: str = "en",
+               encoding: str | None, separator: str | None,
                sheet_name: str | None = None, layout=None) -> str:
     """Turns the steps into a complete Power Query.
 
-    `lang` sets the language of step names shown in Power BI (Applied Steps),
-    e.g. "Removed duplicates" or "Bez duplikatów".
+    Step names are the ones shown in Power BI (Applied Steps), e.g. "Removed duplicates".
     """
     lines: list[tuple[str, str]] = []   # (step name, expression)
 
     # --- Source ---------------------------------------------------------------
-    source, headers = t("m_source", lang), t("m_headers", lang)
+    source, headers = t("m_source"), t("m_headers")
     if file_type == "excel":
         # Select the sheet by name - position {0} could point to a named table instead.
         item = f"{{[Item={m_text(sheet_name)}, Kind=\"Sheet\"]}}" if sheet_name else "{0}"
@@ -207,7 +206,7 @@ def steps_to_m(steps: list[Step], file_path: str, file_type: str,
     if layout is not None:
         # Wide layout: unpivot instead of promoting headers (see reshape.py).
         from reshape import wide_to_m
-        lines.extend(wide_to_m(layout, lang, source))
+        lines.extend(wide_to_m(layout, source))
         prev = lines[-1][0]
     else:
         lines.append((headers, f"Table.PromoteHeaders({m_name(source)}, [PromoteAllScalars=true])"))
@@ -224,45 +223,45 @@ def steps_to_m(steps: list[Step], file_path: str, file_type: str,
 
         if step.kind == "trim":
             pairs = ", ".join(f"{{{m_text(c)}, each if _ is text then Text.Trim(_) else _}}" for c in step.columns)
-            add(t("m_trim", lang), f"Table.TransformColumns(PREV, {{{pairs}}})")
+            add(t("m_trim"), f"Table.TransformColumns(PREV, {{{pairs}}})")
 
         elif step.kind == "nulls":
             placeholders = m_list(sorted(MISSING_PLACEHOLDERS | {""}))
-            add(t("m_nulls", lang),
+            add(t("m_nulls"),
                 f"Table.TransformColumns(PREV, List.Transform({m_list(step.columns)}, (col) => "
                 f"{{col, (x) => if x is text and List.Contains({placeholders}, Text.Lower(Text.Trim(x))) "
                 f"then null else x}}))")
 
         elif step.kind in ("variants", "recode"):
-            map_name = t("m_map" if step.kind == "variants" else "m_old_codes", lang, col=col)
+            map_name = t("m_map" if step.kind == "variants" else "m_old_codes", col=col)
             mapping = ", ".join(f"{m_name(k)} = {m_text(v)}" for k, v in step.params["mapping"].items())
             lines.append((map_name, f"[{mapping}]"))
-            add(t("m_unified" if step.kind == "variants" else "m_recoded", lang, col=col),
+            add(t("m_unified" if step.kind == "variants" else "m_recoded", col=col),
                 f"Table.TransformColumns(PREV, {{{{{m_text(col)}, "
                 f"each if _ is text then Record.FieldOrDefault({m_name(map_name)}, _, _) else _}}}})")
 
         elif step.kind == "numbers":
             m_type = "Int64.Type" if step.params["integer"] else "type number"
-            add(t("m_no_spaces", lang, col=col),
+            add(t("m_no_spaces", col=col),
                 f'Table.TransformColumns(PREV, {{{{{m_text(col)}, '
                 f'each if _ is text then Text.Remove(_, {{" ", "#(00A0)"}}) else _}}}})')
-            add(t("m_number", lang, col=col),
+            add(t("m_number", col=col),
                 f"Table.TransformColumnTypes(PREV, {{{{{m_text(col)}, {m_type}}}}}, {m_text(step.params['culture'])})")
 
         elif step.kind == "dates":
-            add(t("m_date", lang, col=col),
+            add(t("m_date", col=col),
                 f'Table.TransformColumns(PREV, {{{{{m_text(col)}, each if _ is text then ('
                 f'if Text.Contains(_, ".") then Date.FromText(_, [Format="d.M.yyyy"]) '
                 f'else if Text.Contains(_, "/") then Date.FromText(_, [Format="d/M/yyyy"]) '
                 f'else Date.FromText(_, [Format="yyyy-MM-dd"])) else _, type date}}}})')
 
         elif step.kind == "nip":
-            add(t("m_nip", lang, col=col),
+            add(t("m_nip", col=col),
                 f'Table.TransformColumns(PREV, {{{{{m_text(col)}, '
                 f'each if _ is text then Text.Select(_, {{"0".."9"}}) else _, type text}}}})')
 
         elif step.kind == "duplicates":
-            add(t("m_distinct", lang), "Table.Distinct(PREV)")
+            add(t("m_distinct"), "Table.Distinct(PREV)")
 
     # --- Assemble the query ---------------------------------------------------
     body = ",\n".join(f"    {m_name(name)} = {expr}" for name, expr in lines)

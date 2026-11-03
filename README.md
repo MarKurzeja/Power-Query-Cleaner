@@ -6,7 +6,7 @@
 
 A data preparation project in two parts:
 
-- **Part A:** a Streamlit app that profiles a messy CSV or Excel file, proposes a cleaning plan and generates ready-to-use Power Query (M) code. Built for Polish data formats: Windows-1250 encoding, decimal commas, `dd.mm.yyyy` dates, NIP tax IDs and spelling variants (`Kraków` / `krakow` / `KRAKÓW`). The interface is in English and Polish.
+- **Part A:** a Streamlit app that profiles a messy CSV or Excel file, proposes a cleaning plan and generates ready-to-use Power Query (M) code. Built for Polish data formats: Windows-1250 encoding, decimal commas, `dd.mm.yyyy` dates, NIP tax IDs and spelling variants (`Kraków` / `krakow` / `KRAKÓW`).
 - **Part B:** a Power BI dashboard on **~960,000 daily air quality measurements from 296 GIOŚ stations (2018–2024)**, prepared with the app.
 
 ![Overview dashboard](images/dashboard_overview.png)

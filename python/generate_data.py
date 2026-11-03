@@ -42,10 +42,10 @@ def fmt_nip(nip: str) -> str:
     """Formats a NIP in one of the styles found in real files."""
     if random.random() < 0.05:  # 5% of NIPs with a typo (last digit changed)
         nip = nip[:9] + str((int(nip[9]) + 1) % 10)
-    style = random.choices(["plain", "dashes", "pl"], weights=[60, 30, 10])[0]
+    style = random.choices(["plain", "dashes", "prefix"], weights=[60, 30, 10])[0]
     if style == "dashes":
         return f"{nip[:3]}-{nip[3:6]}-{nip[6:8]}-{nip[8:]}"
-    if style == "pl":
+    if style == "prefix":
         return "PL" + nip
     return nip
 
@@ -54,8 +54,8 @@ CUSTOMER_NIPS = {i: make_nip() for i in range(1, 121)}  # one NIP per customer
 
 
 def fmt_date(d: date) -> str:
-    style = random.choices(["pl", "iso", "slash"], weights=[70, 20, 10])[0]
-    return {"pl": d.strftime("%d.%m.%Y"), "iso": d.isoformat(), "slash": d.strftime("%d/%m/%Y")}[style]
+    style = random.choices(["dot", "iso", "slash"], weights=[70, 20, 10])[0]
+    return {"dot": d.strftime("%d.%m.%Y"), "iso": d.isoformat(), "slash": d.strftime("%d/%m/%Y")}[style]
 
 
 def fmt_amount(x: float) -> str:
