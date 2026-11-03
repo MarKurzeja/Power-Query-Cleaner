@@ -184,7 +184,7 @@ def m_list(values) -> str:
 
 
 def steps_to_m(steps: list[Step], file_path: str, file_type: str,
-               encoding: str | None, separator: str | None, lang: str = "pl",
+               encoding: str | None, separator: str | None, lang: str = "en",
                sheet_name: str | None = None, layout=None) -> str:
     """Turns the steps into a complete Power Query.
 

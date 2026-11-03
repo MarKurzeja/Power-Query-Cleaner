@@ -3,10 +3,12 @@ Wide-layout files with a multi-row header.
 
 Example - a GIOŚ file with PM10 measurements:
 
-    Nr                1             2             ...
-    Kod stacji        DsGlogWiStwo  DsJaworMOB    ...   <- key row
-    Wskaźnik          PM10          PM10          ...   <- constant
-    Jednostka         ug/m3         ug/m3         ...   <- constant
+    Nr                1             2             ...   (No.)
+    Kod stacji        DsGlogWiStwo  DsJaworMOB    ...   <- key row (station code)
+    Wskaźnik          PM10          PM10          ...   <- constant (indicator)
+    Jednostka         ug/m3         ug/m3         ...   <- constant (unit)
+
+(Row labels are kept exactly as GIOŚ publishes them, in Polish.)
     2019-01-01        13.71         13.15         ...   <- data starts here
     2019-01-02         8.28         11.26         ...
 

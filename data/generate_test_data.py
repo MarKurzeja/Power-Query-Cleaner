@@ -21,8 +21,8 @@ CITIES = ["Kraków", "Warszawa", "Gdańsk", "Wrocław", "Łódź", "Poznań"]
 CITY_TYPOS = {"Kraków": ["krakow", "KRAKÓW", "Krakow "], "Łódź": ["Lodz", "łódź"], "Wrocław": ["Wroclaw"]}
 POSTCODES = {"Kraków": "30-001", "Warszawa": "00-950", "Gdańsk": "80-001",
              "Wrocław": "50-001", "Łódź": "90-001", "Poznań": "60-001"}
-PRODUCTS = [("Kawa ziarnista 1 kg", 89.99), ("Ekspres przelewowy", 349.00),
-            ("Młynek do kawy", 159.50), ("Kubek termiczny", 64.90), ("Filtry papierowe", 12.99)]
+PRODUCTS = [("Coffee beans 1 kg", 89.99), ("Drip coffee maker", 349.00),
+            ("Coffee grinder", 159.50), ("Travel mug", 64.90), ("Paper filters", 12.99)]
 
 
 NIP_WEIGHTS = (6, 5, 7, 2, 3, 4, 5, 6, 7)
@@ -59,6 +59,7 @@ def fmt_date(d: date) -> str:
 
 def fmt_amount(x: float) -> str:
     text = f"{x:,.2f}".replace(",", " ").replace(".", ",")  # 1 234,56
+    # "brak" = Polish for "missing" - a placeholder commonly found in real Polish files
     return text if random.random() > 0.05 else "brak"
 
 
@@ -73,22 +74,22 @@ for i in range(1, 301):
     if random.random() < 0.01:
         qty = 400  # data entry error - an outlier
     rows.append({
-        "id_zamowienia": f"ZAM-{i:04d}",
-        "data_zamowienia": fmt_date(start + timedelta(days=random.randint(0, 270))),
-        "miasto": city_written if random.random() > 0.04 else "",
-        "kod_pocztowy": POSTCODES[city],
-        "produkt": name if random.random() > 0.1 else f"  {name}",
-        "ilosc": str(qty),
-        "kwota_brutto": fmt_amount(price * qty),
-        "email_klienta": f"klient{customer}@example.pl",
-        "nip_klienta": fmt_nip(CUSTOMER_NIPS[customer]),
+        "order_id": f"ORD-{i:04d}",
+        "order_date": fmt_date(start + timedelta(days=random.randint(0, 270))),
+        "city": city_written if random.random() > 0.04 else "",
+        "postcode": POSTCODES[city],
+        "product": name if random.random() > 0.1 else f"  {name}",
+        "quantity": str(qty),
+        "gross_amount": fmt_amount(price * qty),
+        "customer_email": f"customer{customer}@example.com",
+        "customer_nip": fmt_nip(CUSTOMER_NIPS[customer]),
     })
 
 # Duplicates: a few orders entered twice
 rows += random.sample(rows, 6)
 random.shuffle(rows)
 
-out = Path(__file__).parent / "zamowienia_brudne.csv"
+out = Path(__file__).parent / "orders_messy.csv"
 with open(out, "w", encoding="cp1250", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=rows[0].keys(), delimiter=";")
     writer.writeheader()

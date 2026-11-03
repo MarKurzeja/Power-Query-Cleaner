@@ -19,8 +19,8 @@ TEXTS: dict[str, dict[str, str]] = {
     "language": {"en": "Language", "pl": "Język"},
     "choose_file": {"en": "Choose a file", "pl": "Wybierz plik"},
     "no_file_hint": {
-        "en": "No file at hand? Run `python data/generate_test_data.py` and upload `data/zamowienia_brudne.csv`.",
-        "pl": "Nie masz pliku pod ręką? Uruchom `python data/generate_test_data.py` i wrzuć `data/zamowienia_brudne.csv`.",
+        "en": "No file at hand? Run `python data/generate_test_data.py` and upload `data/orders_messy.csv`.",
+        "pl": "Nie masz pliku pod ręką? Uruchom `python data/generate_test_data.py` i wrzuć `data/orders_messy.csv`.",
     },
     "load_error": {"en": "Could not read the file: {error}", "pl": "Nie udało się wczytać pliku: {error}"},
     "loaded_csv": {
@@ -172,7 +172,7 @@ TEXTS: dict[str, dict[str, str]] = {
     "tab_before": {"en": "Before cleaning", "pl": "Przed czyszczeniem"},
     "tab_after": {"en": "After cleaning", "pl": "Po czyszczeniu"},
 
-    # --- Kod Power Query ------------------------------------------------------
+    # --- Power Query code ------------------------------------------------------
     "code_header": {"en": "Power Query code", "pl": "Kod Power Query"},
     "path_label": {"en": "File path on the computer running Power BI", "pl": "Ścieżka do pliku na komputerze z Power BI"},
     "path_help": {

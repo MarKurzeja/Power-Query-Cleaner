@@ -5,6 +5,6 @@ __pycache__/
 .env
 .streamlit/secrets.toml
 
-# Surowe dane GIOS (duze pliki) - instrukcja pobrania w README
+# Raw GIOŚ data (large files) - download instructions in README
 data/gios/
 .DS_Store

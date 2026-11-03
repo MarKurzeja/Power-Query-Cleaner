@@ -18,7 +18,7 @@ from i18n import TEXTS, issues_count  # noqa: E402
 from loading import load_file  # noqa: E402
 from profiling import is_valid_nip, profile_column, profile_dataframe  # noqa: E402
 
-DATA = Path(__file__).resolve().parent.parent / "data" / "zamowienia_brudne.csv"
+DATA = Path(__file__).resolve().parent.parent / "data" / "orders_messy.csv"
 
 
 # --- NIP ----------------------------------------------------------------------
@@ -51,17 +51,17 @@ def test_polish_plural():
 
 # --- Type detection -----------------------------------------------------------
 def test_detects_polish_decimal_comma():
-    col = profile_column(pd.Series(["1 234,56", "12,50", "7,00"], name="kwota"))
+    col = profile_column(pd.Series(["1 234,56", "12,50", "7,00"], name="amount"))
     assert col.detected_type == "decimal_comma"
 
 
 def test_detects_mixed_date_formats():
-    col = profile_column(pd.Series(["05.03.2025", "2025-03-06", "07/03/2025"], name="data"))
+    col = profile_column(pd.Series(["05.03.2025", "2025-03-06", "07/03/2025"], name="date"))
     assert col.detected_type == "date_mixed"
 
 
 def test_placeholder_words_are_not_type_errors():
-    col = profile_column(pd.Series(["10,00", "brak", "20,00", "-"], name="kwota"))
+    col = profile_column(pd.Series(["10,00", "brak", "20,00", "-"], name="amount"))
     assert col.type_match_pct == 1.0
     assert any(i.key == "issue_placeholders" for i in col.issues)
 
@@ -82,16 +82,16 @@ def test_cleaning_removes_duplicates_and_fixes_types():
     result, profile = _load()
     cleaned = apply_steps(result.df, suggest_steps(result.df, profile))
     assert len(cleaned) == len(result.df) - profile.duplicate_rows
-    assert pd.api.types.is_datetime64_any_dtype(cleaned["data_zamowienia"])
-    assert pd.api.types.is_float_dtype(cleaned["kwota_brutto"])
-    assert cleaned["data_zamowienia"].notna().all()
-    assert set(cleaned["miasto"].dropna()) <= {"Kraków", "Warszawa", "Gdańsk", "Wrocław", "Łódź", "Poznań"}
+    assert pd.api.types.is_datetime64_any_dtype(cleaned["order_date"])
+    assert pd.api.types.is_float_dtype(cleaned["gross_amount"])
+    assert cleaned["order_date"].notna().all()
+    assert set(cleaned["city"].dropna()) <= {"Kraków", "Warszawa", "Gdańsk", "Wrocław", "Łódź", "Poznań"}
 
 
 def test_power_query_code_in_both_languages():
     result, profile = _load()
     steps = suggest_steps(result.df, profile)
-    m_pl = steps_to_m(steps, "C:\\dane\\plik.csv", "csv", result.encoding, result.separator, "pl")
+    m_pl = steps_to_m(steps, "C:\\data\\file.csv", "csv", result.encoding, result.separator, "pl")
     m_en = steps_to_m(steps, "C:\\data\\file.csv", "csv", result.encoding, result.separator, "en")
     assert m_pl.startswith("let") and m_pl.rstrip().endswith('#"Bez duplikatów"')
     assert m_en.rstrip().endswith('#"Removed duplicates"')

@@ -42,6 +42,7 @@ measurements would silently disappear when filtering by city in Power BI.
 | `tests/` | automated tests (pytest) |
 | `data/generate_test_data.py` | generator of messy test data |
 | `smog.pbix` | Power BI dashboard (GIOŚ air quality data) |
+| `orders.pbix` | Power BI file used to test the generated code on the sample orders data |
 | `docs/` | dashboard screenshots and PDF |
 
 ## Result in Power BI
@@ -49,11 +50,11 @@ measurements would silently disappear when filtering by city in Power BI.
 The generated code runs in Power BI Desktop without errors - every column passes the *Column quality* check
 with **0% errors**:
 
-![Power Query result](powerbi-wynik.png)
+![Power Query result](powerbi-result.png)
 
 Each cleaning step appears as a named step in *Applied Steps*:
 
-![Applied steps](powerbi-kroki.png)
+![Applied steps](powerbi-applied-steps.png)
 
 ## Power BI dashboard: air quality in Polish cities (GIOŚ, 2018-2024)
 

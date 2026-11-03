@@ -1,0 +1,307 @@
+order_id;order_date;city;postcode;product;quantity;gross_amount;customer_email;customer_nip
+ORD-0161;03.03.2025;Kraków;30-001;Drip coffee maker;3;1 047,00;customer58@example.com;6581223620
+ORD-0044;08.04.2025;Wroc³aw;50-001;  Paper filters;3;38,97;customer61@example.com;646-688-93-73
+ORD-0123;2025-04-29;Lodz;90-001;Coffee grinder;4;638,00;customer72@example.com;598-776-94-58
+ORD-0114;11.03.2025;Gdañsk;80-001;Travel mug;4;259,60;customer43@example.com;5586850143
+ORD-0280;07.03.2025;Gdañsk;80-001;Travel mug;3;194,70;customer24@example.com;8810801322
+ORD-0082;11.02.2025;£ódŸ;90-001;Drip coffee maker;2;698,00;customer98@example.com;870-348-24-77
+ORD-0035;2025-02-22;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer83@example.com;5777520474
+ORD-0166;18.01.2025;Warszawa;00-950;Coffee grinder;4;638,00;customer36@example.com;4487401648
+ORD-0196;2025-06-06;Warszawa;00-950;Drip coffee maker;1;349,00;customer77@example.com;2436349575
+ORD-0273;22.05.2025;Kraków;30-001;Paper filters;3;38,97;customer118@example.com;6623285881
+ORD-0267;22/05/2025;Gdañsk;80-001;Coffee grinder;4;638,00;customer110@example.com;5316117243
+ORD-0202;07.06.2025;Poznañ;60-001;Coffee beans 1 kg;3;269,97;customer29@example.com;2361939900
+ORD-0088;07/04/2025;Wroc³aw;50-001;Drip coffee maker;3;1 047,00;customer59@example.com;416-658-76-03
+ORD-0181;03.09.2025;;30-001;Travel mug;3;194,70;customer12@example.com;984-969-65-30
+ORD-0131;2025-01-22;Gdañsk;80-001;Paper filters;3;38,97;customer106@example.com;676-627-02-87
+ORD-0173;22.06.2025;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer48@example.com;PL9236629948
+ORD-0216;17.02.2025;Gdañsk;80-001;Travel mug;3;194,70;customer80@example.com;437-498-94-10
+ORD-0010;21.05.2025;Kraków;30-001;Coffee grinder;2;319,00;customer78@example.com;9856855745
+ORD-0002;04.06.2025;Warszawa;00-950;  Coffee beans 1 kg;4;brak;customer82@example.com;5008427108
+ORD-0243;19.08.2025;Kraków;30-001;  Drip coffee maker;3;1 047,00;customer117@example.com;147-095-21-41
+ORD-0115;05.05.2025;Gdañsk;80-001;Coffee grinder;4;638,00;customer95@example.com;3967175654
+ORD-0127;12.03.2025;Gdañsk;80-001;Drip coffee maker;4;1 396,00;customer66@example.com;PL8080531004
+ORD-0281;24.08.2025;;60-001;Drip coffee maker;1;349,00;customer59@example.com;4166587603
+ORD-0170;03/07/2025;;50-001;Drip coffee maker;2;698,00;customer23@example.com;1106513338
+ORD-0024;10.09.2025;Warszawa;00-950;Paper filters;1;12,99;customer20@example.com;609-839-30-16
+ORD-0294;05.01.2025;Kraków;30-001;Drip coffee maker;3;1 047,00;customer45@example.com;798-169-34-07
+ORD-0038;10.01.2025;Poznañ;60-001;Travel mug;1;64,90;customer58@example.com;6581223620
+ORD-0141;02.09.2025;KRAKÓW;30-001;Coffee beans 1 kg;4;359,96;customer111@example.com;105-045-56-25
+ORD-0274;20/09/2025;Lodz;90-001;Paper filters;3;38,97;customer38@example.com;PL9011280597
+ORD-0113;11.04.2025;Gdañsk;80-001;  Drip coffee maker;4;1 396,00;customer93@example.com;1659401390
+ORD-0030;2025-06-18;Wroclaw;50-001;Coffee grinder;4;638,00;customer72@example.com;5987769458
+ORD-0132;2025-06-28;Warszawa;00-950;Coffee grinder;1;159,50;customer112@example.com;4869222198
+ORD-0299;06.02.2025;Kraków;30-001;Drip coffee maker;3;1 047,00;customer8@example.com;8525534194
+ORD-0023;28.06.2025;Poznañ;60-001;Coffee beans 1 kg;2;179,98;customer68@example.com;4745299126
+ORD-0287;2025-09-07;Warszawa;00-950;  Coffee grinder;3;478,50;customer46@example.com;PL7088356155
+ORD-0166;18.01.2025;Warszawa;00-950;Coffee grinder;4;638,00;customer36@example.com;4487401648
+ORD-0104;29.03.2025;Wroc³aw;50-001;Paper filters;1;12,99;customer61@example.com;PL6466889373
+ORD-0180;16.05.2025;Gdañsk;80-001;  Drip coffee maker;4;1 396,00;customer25@example.com;7773602609
+ORD-0263;19.02.2025;£ódŸ;90-001;Paper filters;4;51,96;customer88@example.com;381-206-79-70
+ORD-0285;25.03.2025;Gdañsk;80-001;Paper filters;1;12,99;customer110@example.com;5316117243
+ORD-0145;01.06.2025;Poznañ;60-001;Coffee grinder;2;319,00;customer27@example.com;5309805002
+ORD-0108;19.08.2025;Wroc³aw;50-001;Coffee grinder;3;478,50;customer4@example.com;365-423-51-14
+ORD-0084;2025-06-07;Wroc³aw;50-001;Coffee beans 1 kg;4;359,96;customer72@example.com;5987769458
+ORD-0007;26.02.2025;;80-001;  Drip coffee maker;3;1 047,00;customer17@example.com;4252880959
+ORD-0111;31.07.2025;Kraków;30-001;Coffee grinder;4;638,00;customer111@example.com;1050455625
+ORD-0061;21.07.2025;Wroc³aw;50-001;Coffee grinder;1;159,50;customer64@example.com;2627204652
+ORD-0045;06.04.2025;Wroc³aw;50-001;Travel mug;4;259,60;customer115@example.com;164-090-97-48
+ORD-0232;01.02.2025;krakow;30-001;Coffee grinder;3;brak;customer88@example.com;3812067970
+ORD-0190;27.04.2025;Gdañsk;80-001;Travel mug;1;64,90;customer110@example.com;5316117243
+ORD-0148;15/04/2025;Wroclaw;50-001;Coffee grinder;3;478,50;customer11@example.com;637-672-42-37
+ORD-0227;03.01.2025;Wroclaw;50-001;Travel mug;2;129,80;customer59@example.com;4166587603
+ORD-0179;2025-09-05;Poznañ;60-001;Coffee beans 1 kg;1;89,99;customer71@example.com;8165726281
+ORD-0144;08.05.2025;Wroc³aw;50-001;Drip coffee maker;3;1 047,00;customer32@example.com;899-118-38-49
+ORD-0272;24.07.2025;Kraków;30-001;Coffee beans 1 kg;1;89,99;customer21@example.com;1310518341
+ORD-0014;17.09.2025;Kraków;30-001;Paper filters;3;38,97;customer40@example.com;3260256347
+ORD-0201;2025-03-07;Warszawa;00-950;Paper filters;3;38,97;customer24@example.com;881-080-13-22
+ORD-0254;2025-03-26;³ódŸ;90-001;Paper filters;2;25,98;customer2@example.com;700-133-89-05
+ORD-0091;07.08.2025;³ódŸ;90-001;Coffee grinder;2;319,00;customer8@example.com;8525534194
+ORD-0006;17.04.2025;Kraków;30-001;Drip coffee maker;2;698,00;customer17@example.com;4252880959
+ORD-0233;19.07.2025;Poznañ;60-001;Paper filters;2;25,98;customer111@example.com;PL1050455625
+ORD-0186;13.05.2025;Poznañ;60-001;Travel mug;2;129,80;customer26@example.com;7474687236
+ORD-0245;01/06/2025;Warszawa;00-950;Paper filters;2;25,98;customer29@example.com;236-193-99-00
+ORD-0168;23.04.2025;£ódŸ;90-001;Coffee grinder;1;159,50;customer24@example.com;8810801322
+ORD-0032;09.03.2025;krakow;30-001;Paper filters;1;12,99;customer99@example.com;PL8109324802
+ORD-0097;09.07.2025;Kraków;30-001;Travel mug;3;194,70;customer98@example.com;8703482478
+ORD-0189;2025-01-26;Wroclaw;50-001;Coffee beans 1 kg;3;brak;customer51@example.com;5895134338
+ORD-0205;28.03.2025;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer1@example.com;2043321812
+ORD-0198;22.05.2025;Gdañsk;80-001;Coffee beans 1 kg;1;89,99;customer62@example.com;4467065621
+ORD-0297;19.03.2025;Gdañsk;80-001;Paper filters;2;25,98;customer63@example.com;829-806-99-07
+ORD-0059;21.09.2025;Gdañsk;80-001;Coffee grinder;2;319,00;customer52@example.com;3003791765
+ORD-0252;17.09.2025;Gdañsk;80-001;Coffee beans 1 kg;1;89,99;customer94@example.com;1490278742
+ORD-0171;20.01.2025;Warszawa;00-950;Travel mug;3;194,70;customer70@example.com;PL2931491901
+ORD-0150;06.01.2025;Poznañ;60-001;Drip coffee maker;1;349,00;customer16@example.com;1482814893
+ORD-0075;31.03.2025;Warszawa;00-950;Paper filters;1;brak;customer95@example.com;396-717-56-54
+ORD-0074;2025-04-13;Kraków;30-001;Drip coffee maker;4;1 396,00;customer53@example.com;467-632-01-64
+ORD-0072;10.02.2025;Warszawa;00-950;Coffee grinder;3;478,50;customer6@example.com;2618495934
+ORD-0172;15.06.2025;Warszawa;00-950;Drip coffee maker;2;698,00;customer44@example.com;3940196555
+ORD-0268;2025-07-23;£ódŸ;90-001;Coffee grinder;3;478,50;customer40@example.com;326-025-63-47
+ORD-0036;28/06/2025;³ódŸ;90-001;Coffee beans 1 kg;2;179,98;customer117@example.com;1470952141
+ORD-0089;25.01.2025;krakow;30-001;Coffee beans 1 kg;1;89,99;customer77@example.com;243-634-95-75
+ORD-0119;24/07/2025;Poznañ;60-001;Coffee grinder;1;159,50;customer22@example.com;8382997372
+ORD-0261;2025-08-30;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer28@example.com;888-208-12-16
+ORD-0195;18.05.2025;Warszawa;00-950;Drip coffee maker;2;698,00;customer83@example.com;5777520474
+ORD-0293;04.09.2025;Poznañ;60-001;Paper filters;3;38,97;customer56@example.com;7872774348
+ORD-0122;28.02.2025;Poznañ;60-001;Travel mug;1;64,90;customer41@example.com;316-073-37-53
+ORD-0039;03.08.2025;Gdañsk;80-001;  Drip coffee maker;1;349,00;customer39@example.com;4315869236
+ORD-0284;13.09.2025;Wroclaw;50-001;Travel mug;1;64,90;customer104@example.com;3787558862
+ORD-0067;2025-04-27;Poznañ;60-001;Coffee beans 1 kg;4;359,96;customer77@example.com;243-634-95-75
+ORD-0003;03.08.2025;Warszawa;00-950;Paper filters;4;51,96;customer18@example.com;801-543-03-95
+ORD-0124;20.04.2025;Warszawa;00-950;Travel mug;4;259,60;customer76@example.com;467-837-77-02
+ORD-0037;2025-06-21;Warszawa;00-950;Coffee beans 1 kg;1;89,99;customer41@example.com;3160733753
+ORD-0222;2025-08-16;Poznañ;60-001;Travel mug;2;129,80;customer52@example.com;3003791765
+ORD-0229;20.09.2025;Gdañsk;80-001;Coffee grinder;2;319,00;customer58@example.com;658-122-36-20
+ORD-0051;03.02.2025;Wroclaw;50-001;Coffee beans 1 kg;3;269,97;customer104@example.com;378-755-88-62
+ORD-0101;09.01.2025;Kraków;30-001;  Paper filters;4;51,96;customer117@example.com;PL1470952141
+ORD-0298;10.09.2025;Poznañ;60-001;Coffee beans 1 kg;1;89,99;customer30@example.com;269-985-43-59
+ORD-0226;07.04.2025;Poznañ;60-001;Travel mug;3;194,70;customer14@example.com;2669784803
+ORD-0033;02/05/2025;Poznañ;60-001;Travel mug;4;259,60;customer6@example.com;2618495934
+ORD-0096;25.05.2025;Warszawa;00-950;Travel mug;2;129,80;customer118@example.com;6623285880
+ORD-0193;16.09.2025;Wroclaw;50-001;Drip coffee maker;3;1 047,00;customer36@example.com;4487401648
+ORD-0217;27.03.2025;Poznañ;60-001;  Travel mug;4;259,60;customer103@example.com;6840449975
+ORD-0290;31.08.2025;;00-950;Drip coffee maker;1;349,00;customer51@example.com;5895134338
+ORD-0286;30.07.2025;Gdañsk;80-001;Coffee grinder;3;478,50;customer72@example.com;598-776-94-58
+ORD-0070;07.05.2025;£ódŸ;90-001;Coffee grinder;4;638,00;customer79@example.com;543-135-18-24
+ORD-0200;24.04.2025;Wroc³aw;50-001;Coffee beans 1 kg;2;179,98;customer75@example.com;6494808317
+ORD-0276;30.06.2025;;00-950;Drip coffee maker;3;1 047,00;customer103@example.com;684-044-99-75
+ORD-0257;12/07/2025;³ódŸ;90-001;Coffee grinder;1;159,50;customer76@example.com;467-837-77-02
+ORD-0230;09/03/2025;Warszawa;00-950;Drip coffee maker;3;1 047,00;customer80@example.com;4374989410
+ORD-0278;16.04.2025;Poznañ;60-001;Drip coffee maker;2;698,00;customer31@example.com;4462475107
+ORD-0106;03.06.2025;Kraków;30-001;Paper filters;4;51,96;customer19@example.com;3489638348
+ORD-0149;03.05.2025;Poznañ;60-001;Coffee beans 1 kg;4;359,96;customer40@example.com;3260256347
+ORD-0082;11.02.2025;£ódŸ;90-001;Drip coffee maker;2;698,00;customer98@example.com;870-348-24-77
+ORD-0258;24.05.2025;Lodz;90-001;Travel mug;2;129,80;customer22@example.com;8382997372
+ORD-0053;03.09.2025;Lodz;90-001;Coffee beans 1 kg;4;359,96;customer40@example.com;326-025-63-47
+ORD-0246;03.01.2025;Gdañsk;80-001;Coffee beans 1 kg;2;179,98;customer71@example.com;816-572-62-81
+ORD-0109;12.02.2025;Kraków;30-001;Coffee grinder;2;319,00;customer103@example.com;6840449975
+ORD-0240;18.09.2025;£ódŸ;90-001;Coffee beans 1 kg;3;269,97;customer117@example.com;PL1470952141
+ORD-0022;26.09.2025;Kraków;30-001;Coffee beans 1 kg;4;359,96;customer32@example.com;8991183849
+ORD-0041;29.08.2025;Gdañsk;80-001;Coffee beans 1 kg;1;89,99;customer68@example.com;4745299126
+ORD-0236;11.05.2025;Wroclaw;50-001;Paper filters;2;brak;customer34@example.com;5980841247
+ORD-0211;24.09.2025;Poznañ;60-001;Coffee beans 1 kg;4;359,96;customer39@example.com;431-586-92-36
+ORD-0162;22.07.2025;Gdañsk;80-001;Drip coffee maker;2;698,00;customer12@example.com;9849696531
+ORD-0177;13.07.2025;KRAKÓW;30-001;Travel mug;4;259,60;customer22@example.com;838-299-73-72
+ORD-0077;27.02.2025;Warszawa;00-950;Paper filters;3;38,97;customer60@example.com;4669096703
+ORD-0155;09.06.2025;£ódŸ;90-001;  Travel mug;4;259,60;customer9@example.com;3832764838
+ORD-0269;27.01.2025;Warszawa;00-950;  Coffee beans 1 kg;4;359,96;customer28@example.com;PL8882081216
+ORD-0085;05/02/2025;Gdañsk;80-001;Coffee beans 1 kg;1;89,99;customer70@example.com;293-149-19-00
+ORD-0087;2025-04-25;Warszawa;00-950;Paper filters;2;25,98;customer51@example.com;5895134338
+ORD-0103;26.04.2025;Kraków;30-001;  Travel mug;2;129,80;customer59@example.com;4166587603
+ORD-0279;2025-01-22;Kraków;30-001;Travel mug;1;64,90;customer79@example.com;5431351824
+ORD-0043;23.08.2025;Poznañ;60-001;Drip coffee maker;2;698,00;customer104@example.com;3787558862
+ORD-0300;18.01.2025;Poznañ;60-001;  Drip coffee maker;4;1 396,00;customer50@example.com;6777387219
+ORD-0110;14.02.2025;KRAKÓW;30-001;Travel mug;3;194,70;customer47@example.com;6148465642
+ORD-0118;2025-07-04;Poznañ;60-001;Travel mug;1;64,90;customer70@example.com;2931491900
+ORD-0092;2025-04-05;Poznañ;60-001;Travel mug;2;129,80;customer53@example.com;467-632-01-64
+ORD-0214;22/08/2025;Poznañ;60-001;Coffee beans 1 kg;3;269,97;customer116@example.com;4953394217
+ORD-0158;24.09.2025;Poznañ;60-001;Coffee grinder;1;159,50;customer12@example.com;9849696530
+ORD-0224;2025-04-25;Poznañ;60-001;Travel mug;3;194,70;customer44@example.com;3940196555
+ORD-0064;18.09.2025;Gdañsk;80-001;  Paper filters;2;25,98;customer47@example.com;6148465641
+ORD-0206;2025-04-13;Wroc³aw;50-001;Travel mug;1;64,90;customer50@example.com;6777387219
+ORD-0275;23.08.2025;£ódŸ;90-001;Drip coffee maker;3;1 047,00;customer97@example.com;1715451680
+ORD-0208;10.03.2025;Poznañ;60-001;Paper filters;3;38,97;customer77@example.com;PL2436349575
+ORD-0266;12.07.2025;Kraków;30-001;Coffee beans 1 kg;1;89,99;customer74@example.com;607-527-35-44
+ORD-0137;23.07.2025;Lodz;90-001;Travel mug;3;194,70;customer82@example.com;5008427108
+ORD-0060;2025-03-23;Gdañsk;80-001;Travel mug;4;259,60;customer111@example.com;PL1050455625
+ORD-0182;16.05.2025;Gdañsk;80-001;Travel mug;4;259,60;customer61@example.com;6466889373
+ORD-0264;09.08.2025;Kraków;30-001;  Drip coffee maker;1;349,00;customer116@example.com;495-339-42-17
+ORD-0133;08.08.2025;Poznañ;60-001;Paper filters;3;38,97;customer89@example.com;5034471347
+ORD-0056;28.03.2025;³ódŸ;90-001;Paper filters;1;12,99;customer69@example.com;5190496632
+ORD-0020;01.07.2025;Warszawa;00-950;  Travel mug;2;brak;customer69@example.com;519-049-66-32
+ORD-0078;2025-07-27;Gdañsk;80-001;  Paper filters;2;25,98;customer87@example.com;1913341236
+ORD-0295;12.08.2025;Lodz;90-001;Paper filters;2;25,98;customer48@example.com;9236629948
+ORD-0265;2025-09-02;Wroc³aw;50-001;  Paper filters;4;51,96;customer13@example.com;3871012261
+ORD-0238;2025-04-24;Warszawa;00-950;Travel mug;4;259,60;customer70@example.com;293-149-19-00
+ORD-0262;25/06/2025;Warszawa;00-950;  Paper filters;3;38,97;customer85@example.com;5131869994
+ORD-0015;14.01.2025;Gdañsk;80-001;Paper filters;4;brak;customer29@example.com;236-193-99-00
+ORD-0095;08/04/2025;Gdañsk;80-001;Coffee grinder;1;159,50;customer117@example.com;147-095-21-41
+ORD-0107;27.06.2025;Poznañ;60-001;Drip coffee maker;1;349,00;customer102@example.com;PL3639821463
+ORD-0143;2025-08-15;Poznañ;60-001;Drip coffee maker;4;1 396,00;customer118@example.com;6623285880
+ORD-0093;11.05.2025;Kraków;30-001;Travel mug;2;129,80;customer72@example.com;598-776-94-58
+ORD-0016;25.07.2025;Gdañsk;80-001;Coffee grinder;2;319,00;customer1@example.com;2043321812
+ORD-0248;04.02.2025;£ódŸ;90-001;Paper filters;1;12,99;customer60@example.com;466-909-67-02
+ORD-0260;22/09/2025;Lodz;90-001;Coffee beans 1 kg;3;brak;customer22@example.com;838-299-73-72
+ORD-0176;21.06.2025;Gdañsk;80-001;Drip coffee maker;1;349,00;customer82@example.com;5008427108
+ORD-0054;2025-04-04;Wroc³aw;50-001;Paper filters;2;25,98;customer45@example.com;7981693407
+ORD-0004;16/08/2025;Gdañsk;80-001;  Coffee beans 1 kg;3;269,97;customer89@example.com;PL5034471347
+ORD-0019;2025-04-19;Krakow ;30-001;Coffee beans 1 kg;2;179,98;customer1@example.com;2043321812
+ORD-0156;06.05.2025;³ódŸ;90-001;  Paper filters;2;25,98;customer64@example.com;262-720-46-52
+ORD-0057;02.08.2025;;90-001;Coffee beans 1 kg;3;269,97;customer6@example.com;2618495934
+ORD-0219;02.02.2025;Wroc³aw;50-001;Coffee beans 1 kg;4;359,96;customer114@example.com;8407482174
+ORD-0013;18.06.2025;Gdañsk;80-001;Drip coffee maker;1;349,00;customer72@example.com;PL5987769458
+ORD-0066;08.07.2025;£ódŸ;90-001;Paper filters;4;51,96;customer39@example.com;431-586-92-36
+ORD-0152;27.03.2025;Wroc³aw;50-001;Coffee grinder;4;638,00;customer8@example.com;8525534194
+ORD-0160;14.04.2025;Gdañsk;80-001;Travel mug;2;129,80;customer35@example.com;2182449355
+ORD-0207;22.02.2025;Kraków;30-001;Drip coffee maker;3;1 047,00;customer29@example.com;2361939900
+ORD-0126;02/06/2025;Kraków;30-001;Travel mug;2;129,80;customer80@example.com;4374989410
+ORD-0192;2025-09-26;;80-001;Paper filters;2;25,98;customer52@example.com;3003791765
+ORD-0209;28.03.2025;Wroclaw;50-001;Drip coffee maker;1;349,00;customer28@example.com;888-208-12-16
+ORD-0204;23.08.2025;Warszawa;00-950;Drip coffee maker;4;1 396,00;customer44@example.com;PL3940196555
+ORD-0147;31/01/2025;krakow;30-001;Coffee beans 1 kg;2;179,98;customer34@example.com;5980841247
+ORD-0187;2025-09-25;Gdañsk;80-001;Paper filters;1;12,99;customer59@example.com;PL4166587603
+ORD-0026;17.09.2025;KRAKÓW;30-001;Coffee beans 1 kg;1;89,99;customer83@example.com;PL5777520475
+ORD-0050;20/04/2025;Wroc³aw;50-001;Coffee beans 1 kg;3;269,97;customer34@example.com;598-084-12-47
+ORD-0289;2025-04-05;Wroclaw;50-001;Coffee grinder;4;638,00;customer96@example.com;612-567-46-83
+ORD-0028;25.05.2025;KRAKÓW;30-001;Travel mug;2;129,80;customer68@example.com;4745299126
+ORD-0052;2025-04-13;Warszawa;00-950;Coffee grinder;2;319,00;customer66@example.com;8080531004
+ORD-0009;16.01.2025;Warszawa;00-950;Paper filters;3;38,97;customer6@example.com;PL2618495934
+ORD-0283;09/03/2025;Gdañsk;80-001;Travel mug;4;259,60;customer36@example.com;4487401648
+ORD-0034;2025-05-25;Wroc³aw;50-001;Drip coffee maker;4;1 396,00;customer48@example.com;923-662-99-48
+ORD-0012;20.03.2025;Gdañsk;80-001;  Travel mug;3;194,70;customer41@example.com;316-073-37-53
+ORD-0239;05/05/2025;Wroc³aw;50-001;Coffee beans 1 kg;3;269,97;customer15@example.com;2845146272
+ORD-0212;25/09/2025;krakow;30-001;Travel mug;2;129,80;customer26@example.com;PL7474687236
+ORD-0134;30.05.2025;Gdañsk;80-001;Paper filters;2;25,98;customer69@example.com;5190496632
+ORD-0025;15.08.2025;£ódŸ;90-001;Coffee grinder;4;638,00;customer20@example.com;6098393016
+ORD-0029;18.03.2025;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer72@example.com;598-776-94-58
+ORD-0218;2025-07-14;£ódŸ;90-001;Paper filters;4;51,96;customer87@example.com;191-334-12-36
+ORD-0165;2025-08-10;Gdañsk;80-001;  Coffee beans 1 kg;4;359,96;customer6@example.com;2618495934
+ORD-0105;08.02.2025;£ódŸ;90-001;Drip coffee maker;4;1 396,00;customer28@example.com;888-208-12-16
+ORD-0215;01.03.2025;Gdañsk;80-001;  Coffee grinder;3;478,50;customer103@example.com;6840449975
+ORD-0073;26.04.2025;£ódŸ;90-001;Drip coffee maker;2;698,00;customer14@example.com;266-978-48-03
+ORD-0157;07.06.2025;Kraków;30-001;Coffee beans 1 kg;4;359,96;customer98@example.com;PL8703482477
+ORD-0237;03.07.2025;Poznañ;60-001;Paper filters;3;38,97;customer108@example.com;317-459-61-54
+ORD-0241;18.04.2025;Warszawa;00-950;Paper filters;1;12,99;customer69@example.com;5190496632
+ORD-0197;04.01.2025;Warszawa;00-950;Travel mug;4;259,60;customer39@example.com;431-586-92-36
+ORD-0282;30/08/2025;Gdañsk;80-001;Drip coffee maker;3;1 047,00;customer71@example.com;816-572-62-81
+ORD-0175;24.04.2025;£ódŸ;90-001;Paper filters;2;25,98;customer5@example.com;7155940782
+ORD-0135;09.03.2025;Wroc³aw;50-001;Coffee grinder;2;319,00;customer111@example.com;1050455625
+ORD-0255;07.09.2025;Warszawa;00-950;Travel mug;1;64,90;customer46@example.com;708-835-61-55
+ORD-0100;31.07.2025;Kraków;30-001;  Coffee beans 1 kg;1;89,99;customer105@example.com;8533963604
+ORD-0234;09.05.2025;Wroc³aw;50-001;Coffee grinder;1;159,50;customer71@example.com;816-572-62-81
+ORD-0138;24.08.2025;³ódŸ;90-001;Coffee grinder;1;159,50;customer115@example.com;1640909748
+ORD-0169;17.05.2025;£ódŸ;90-001;Drip coffee maker;2;698,00;customer13@example.com;3871012261
+ORD-0017;2025-02-13;Wroc³aw;50-001;Coffee grinder;3;brak;customer40@example.com;3260256347
+ORD-0160;14.04.2025;Gdañsk;80-001;Travel mug;2;129,80;customer35@example.com;2182449355
+ORD-0271;23.09.2025;;00-950;Travel mug;1;64,90;customer57@example.com;9734714340
+ORD-0291;2025-05-07;Warszawa;00-950;Coffee beans 1 kg;4;359,96;customer84@example.com;2167190226
+ORD-0242;20.03.2025;Poznañ;60-001;  Travel mug;1;64,90;customer83@example.com;5777520474
+ORD-0228;14.06.2025;Warszawa;00-950;Paper filters;2;25,98;customer23@example.com;1106513338
+ORD-0231;2025-05-27;Kraków;30-001;  Paper filters;4;51,96;customer62@example.com;4467065621
+ORD-0220;08.05.2025;³ódŸ;90-001;Paper filters;1;12,99;customer67@example.com;430-923-27-12
+ORD-0159;08.03.2025;Poznañ;60-001;Travel mug;1;64,90;customer10@example.com;603-056-41-30
+ORD-0288;06.02.2025;Warszawa;00-950;Coffee grinder;4;638,00;customer54@example.com;428-708-31-78
+ORD-0253;18.03.2025;Gdañsk;80-001;Paper filters;4;51,96;customer115@example.com;1640909748
+ORD-0259;24.03.2025;Gdañsk;80-001;Coffee beans 1 kg;4;359,96;customer62@example.com;4467065621
+ORD-0098;28.04.2025;£ódŸ;90-001;Travel mug;2;129,80;customer38@example.com;9011280597
+ORD-0282;30/08/2025;Gdañsk;80-001;Drip coffee maker;3;1 047,00;customer71@example.com;816-572-62-81
+ORD-0164;08.02.2025;Poznañ;60-001;Coffee beans 1 kg;3;269,97;customer75@example.com;PL6494808317
+ORD-0199;26.07.2025;Warszawa;00-950;Paper filters;2;25,98;customer98@example.com;8703482477
+ORD-0001;10.07.2025;³ódŸ;90-001;  Coffee grinder;4;638,00;customer75@example.com;PL6494808317
+ORD-0117;13.07.2025;Gdañsk;80-001;Drip coffee maker;2;698,00;customer33@example.com;PL3513542788
+ORD-0094;2025-01-21;Warszawa;00-950;Coffee beans 1 kg;4;359,96;customer35@example.com;2182449355
+ORD-0139;21.05.2025;Poznañ;60-001;  Drip coffee maker;3;1 047,00;customer113@example.com;7937923740
+ORD-0068;14.08.2025;Warszawa;00-950;Drip coffee maker;1;349,00;customer5@example.com;PL7155940782
+ORD-0210;01.03.2025;Lodz;90-001;Coffee beans 1 kg;1;89,99;customer84@example.com;216-719-02-26
+ORD-0076;24/02/2025;Warszawa;00-950;Coffee grinder;400;63 800,00;customer113@example.com;793-792-37-40
+ORD-0116;2025-05-30;Lodz;90-001;Travel mug;2;129,80;customer91@example.com;1249947178
+ORD-0040;30.05.2025;Poznañ;60-001;Paper filters;2;25,98;customer74@example.com;6075273544
+ORD-0136;17.02.2025;£ódŸ;90-001;Travel mug;4;259,60;customer49@example.com;7804436998
+ORD-0018;20.09.2025;Wroc³aw;50-001;Travel mug;3;194,70;customer54@example.com;428-708-31-78
+ORD-0042;30.06.2025;Warszawa;00-950;Coffee beans 1 kg;3;269,97;customer99@example.com;810-932-48-02
+ORD-0292;20.05.2025;Gdañsk;80-001;Coffee grinder;4;638,00;customer111@example.com;1050455625
+ORD-0221;26.03.2025;Lodz;90-001;Paper filters;4;51,96;customer109@example.com;9657809139
+ORD-0235;10.04.2025;Poznañ;60-001;Coffee grinder;2;319,00;customer97@example.com;1715451680
+ORD-0154;13.06.2025;Warszawa;00-950;Coffee grinder;4;638,00;customer32@example.com;8991183849
+ORD-0213;15/02/2025;Poznañ;60-001;Travel mug;400;25 960,00;customer43@example.com;5586850143
+ORD-0296;18.05.2025;Wroc³aw;50-001;Paper filters;3;38,97;customer98@example.com;870-348-24-77
+ORD-0071;21.05.2025;Poznañ;60-001;Travel mug;4;259,60;customer41@example.com;3160733753
+ORD-0270;16/07/2025;Wroclaw;50-001;Drip coffee maker;1;349,00;customer48@example.com;9236629948
+ORD-0188;2025-06-26;Kraków;30-001;Paper filters;1;12,99;customer100@example.com;9613171277
+ORD-0083;2025-04-16;Lodz;90-001;Drip coffee maker;4;1 396,00;customer42@example.com;5330365411
+ORD-0090;13.06.2025;Warszawa;00-950;Paper filters;2;25,98;customer38@example.com;PL9011280597
+ORD-0140;2025-02-16;;60-001;Coffee grinder;2;319,00;customer93@example.com;165-940-13-90
+ORD-0048;04.02.2025;Warszawa;00-950;Paper filters;4;51,96;customer87@example.com;1913341237
+ORD-0146;12.06.2025;Poznañ;60-001;Paper filters;1;12,99;customer10@example.com;603-056-41-30
+ORD-0049;07.07.2025;Wroc³aw;50-001;Coffee grinder;1;159,50;customer57@example.com;9734714340
+ORD-0251;25.02.2025;Wroc³aw;50-001;Coffee grinder;3;478,50;customer100@example.com;9613171277
+ORD-0151;16.01.2025;Warszawa;00-950;Coffee grinder;1;159,50;customer94@example.com;149-027-87-42
+ORD-0267;22/05/2025;Gdañsk;80-001;Coffee grinder;4;638,00;customer110@example.com;5316117243
+ORD-0249;12.06.2025;Warszawa;00-950;Coffee beans 1 kg;1;89,99;customer37@example.com;1052427863
+ORD-0021;27.07.2025;£ódŸ;90-001;Travel mug;4;259,60;customer91@example.com;PL1249947178
+ORD-0129;09.09.2025;Wroc³aw;50-001;Paper filters;4;51,96;customer84@example.com;216-719-02-27
+ORD-0069;16/06/2025;Poznañ;60-001;Coffee beans 1 kg;2;179,98;customer91@example.com;1249947178
+ORD-0184;25.09.2025;Wroc³aw;50-001;Paper filters;1;12,99;customer30@example.com;2699854359
+ORD-0194;2025-05-13;Wroc³aw;50-001;Coffee grinder;2;319,00;customer45@example.com;7981693407
+ORD-0011;21.04.2025;£ódŸ;90-001;Coffee beans 1 kg;1;89,99;customer102@example.com;363-982-14-63
+ORD-0099;30.06.2025;Wroc³aw;50-001;Travel mug;2;129,80;customer59@example.com;416-658-76-03
+ORD-0225;30.05.2025;Wroclaw;50-001;Coffee beans 1 kg;3;269,97;customer44@example.com;394-019-65-55
+ORD-0178;18.01.2025;Warszawa;00-950;Drip coffee maker;1;349,00;customer58@example.com;6581223620
+ORD-0163;13.03.2025;Wroc³aw;50-001;Paper filters;1;12,99;customer32@example.com;8991183849
+ORD-0120;20.07.2025;Poznañ;60-001;Paper filters;2;25,98;customer72@example.com;5987769458
+ORD-0250;2025-04-24;Gdañsk;80-001;Travel mug;1;64,90;customer22@example.com;8382997372
+ORD-0065;13.06.2025;Warszawa;00-950;Paper filters;2;25,98;customer115@example.com;164-090-97-48
+ORD-0055;26.04.2025;Gdañsk;80-001;Drip coffee maker;3;1 047,00;customer21@example.com;131-051-83-41
+ORD-0079;2025-08-17;Gdañsk;80-001;Drip coffee maker;3;1 047,00;customer1@example.com;204-332-18-13
+ORD-0183;18.05.2025;Gdañsk;80-001;Travel mug;3;194,70;customer60@example.com;466-909-67-02
+ORD-0277;01.07.2025;Gdañsk;80-001;Coffee beans 1 kg;2;179,98;customer71@example.com;8165726281
+ORD-0031;08.06.2025;Poznañ;60-001;Travel mug;3;194,70;customer66@example.com;8080531004
+ORD-0174;31.03.2025;Poznañ;60-001;Coffee grinder;3;478,50;customer23@example.com;110-651-33-39
+ORD-0047;30.01.2025;Wroclaw;50-001;Paper filters;3;38,97;customer56@example.com;PL7872774348
+ORD-0256;15.06.2025;Wroc³aw;50-001;Travel mug;1;64,90;customer113@example.com;7937923740
+ORD-0081;10.03.2025;Gdañsk;80-001;Coffee grinder;2;319,00;customer79@example.com;PL5431351824
+ORD-0128;06.04.2025;Warszawa;00-950;  Paper filters;4;51,96;customer22@example.com;8382997373
+ORD-0046;10.02.2025;Kraków;30-001;Drip coffee maker;3;1 047,00;customer70@example.com;2931491900
+ORD-0191;2025-07-28;Poznañ;60-001;Coffee beans 1 kg;4;359,96;customer25@example.com;7773602609
+ORD-0080;23.03.2025;Poznañ;60-001;Drip coffee maker;1;349,00;customer8@example.com;8525534194
+ORD-0244;04.06.2025;Lodz;90-001;Coffee beans 1 kg;1;89,99;customer46@example.com;7088356155
+ORD-0022;26.09.2025;Kraków;30-001;Coffee beans 1 kg;4;359,96;customer32@example.com;8991183849
+ORD-0005;04/03/2025;Gdañsk;80-001;  Coffee beans 1 kg;3;269,97;customer51@example.com;PL5895134338
+ORD-0125;15.05.2025;Warszawa;00-950;Coffee grinder;2;319,00;customer42@example.com;5330365411
+ORD-0203;10.04.2025;Kraków;30-001;Paper filters;1;12,99;customer75@example.com;649-480-83-17
+ORD-0062;09.08.2025;Poznañ;60-001;Travel mug;1;64,90;customer37@example.com;1052427864
+ORD-0142;15.03.2025;Warszawa;00-950;Travel mug;2;129,80;customer100@example.com;9613171277
+ORD-0086;13.07.2025;Poznañ;60-001;Travel mug;4;259,60;customer48@example.com;9236629948
+ORD-0008;27.09.2025;Warszawa;00-950;Coffee grinder;2;319,00;customer7@example.com;2034131644
+ORD-0167;10/01/2025;krakow;30-001;Travel mug;2;129,80;customer26@example.com;PL7474687236
+ORD-0223;2025-01-01;Poznañ;60-001;Coffee beans 1 kg;4;359,96;customer14@example.com;2669784803
+ORD-0121;14.03.2025;Gdañsk;80-001;Travel mug;1;64,90;customer118@example.com;6623285880
+ORD-0058;31.01.2025;Warszawa;00-950;Travel mug;4;259,60;customer39@example.com;431-586-92-36
+ORD-0112;18.05.2025;Warszawa;00-950;Travel mug;2;129,80;customer22@example.com;8382997372
+ORD-0027;01.02.2025;£ódŸ;90-001;Coffee grinder;4;638,00;customer78@example.com;985-685-57-45
+ORD-0185;18.08.2025;Kraków;30-001;Coffee beans 1 kg;2;179,98;customer65@example.com;4755646411
+ORD-0102;19.02.2025;Kraków;30-001;Travel mug;2;129,80;customer104@example.com;378-755-88-62
+ORD-0153;18.03.2025;Lodz;90-001;  Drip coffee maker;4;1 396,00;customer6@example.com;261-849-59-34
+ORD-0247;20.09.2025;Poznañ;60-001;Coffee grinder;4;638,00;customer28@example.com;888-208-12-16
+ORD-0130;2025-03-28;Gdañsk;80-001;Coffee beans 1 kg;2;179,98;customer36@example.com;4487401648
+ORD-0063;2025-05-24;³ódŸ;90-001;Coffee beans 1 kg;4;359,96;customer50@example.com;6777387219
