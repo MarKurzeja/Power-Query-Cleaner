@@ -35,9 +35,8 @@ A data preparation project in two parts:
 | Codes missing from a dictionary | renamed station codes | old codes mapped to current ones |
 | Duplicates, outliers | an order for 400 items | duplicates removed; outliers reported, never removed |
 
-**Validation:** the generated code runs in Power BI Desktop with **0% errors** in *Column quality*, and each step appears as a named step in *Applied Steps* ([screenshot](images/powerquery_applied_steps.png)). CI re-runs the automated tests on every push.
+**Validation:** the generated code runs in Power BI Desktop with **0% errors** in *Column quality*, and each step appears as a named step in *Applied Steps*. CI re-runs the automated tests on every push.
 
-![Power Query result](images/powerquery_result.png)
 
 **Design decisions**
 - **Rules, not a black box.** Profiling and cleaning are plain, deterministic Python rules, so every step can be explained.
